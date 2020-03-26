@@ -1,0 +1,28 @@
+name = Ager theme
+description = A wonderful and beautiful theme
+core = 7.x
+
+;Regions
+regions[header] = 'Header'
+regions[banner] = 'Banner'
+regions[highlighted] = Highlight
+regions[content] = 'Content'
+regions[content_ads_first] = Content Ads First
+regions[content_ads_second] = Content Ads Second
+regions[content_ads_third] = Content Ads Third
+regions[content] = Content
+regions[content_exposed_form] = Exposed form content
+regions[content_listings] = Content Listings
+regions[left_sidebar] = 'Left Sidebar'
+regions[right_sidebar] = 'Right Sidebar'
+regions[footer_top] = 'Footer Top'
+regions[footer_bottom_one] = 'Footer Bottom One'
+regions[footer_bottom_two] = 'Footer Bottom Two'
+regions[footer_bottom_three] = 'Footer Bottom Three'
+regions[footer_bottom_four] = 'Footer Bottom Four'
+
+;CSS
+stylesheets[all][] = css/custom.css
+
+;Javascript
+scripts[] = js/custom.js

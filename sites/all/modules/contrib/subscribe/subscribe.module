@@ -1,0 +1,68 @@
+<?php
+
+function subscribe_theme() {
+    return array(
+        'subscribe_form' => array(
+            'render element' => 'form',
+            'template' => 'subscribe',
+            'path' => drupal_get_path('module', 'subscribe') . '/template',
+        ),
+    );
+}
+
+function subscribe_form($form_state) {
+    $form = array();
+
+//    $form['#attributes'] = array(
+//        'class' => array('form-inline'),
+//    );
+//
+    //$form['#attributes']['class'] = array('form-inline');
+    $form['#prefix'] = '<div class="form-subscribe"><div class="container"><div class="row"><div class="col col-lg-3 title mb-2">'.t('Sign up for a newsletter').'</div><div class="col-sm-12 col-lg-6">';
+    $form['subscribe'] = array(
+        '#type' => 'item',
+        '#markup' => '<input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Your valid email address">',
+        '#theme_wrappers' => array(), // strip div element around the input element
+        //'#placeholder' => t('Your valid email address'),
+    );
+
+    $form['button']['submit'] = array(
+        '#type' => 'item',
+        //'#value' => t('Submit'),
+        '#markup' => '<button type="submit" class="btn btn-primary mb-2 col-3 col-sm-2">'.t('Submit').'</button>',
+        '#theme_wrappers' => array(),
+    );
+    $form['#suffix'] = '</div></div></div></div>';
+    //$form['#theme_wrappers'] = array();
+    return $form;
+}
+
+/**
+ * Implements hook_block_info();
+ */
+function subscribe_block_info() {
+  $blocks['demo_block'] = array(
+    // info: The name of the block.
+    'info' => t('Demo Block'),
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view();
+ */
+function subscribe_block_view($delta = '') {
+  $block = array();
+  switch ($delta) {
+    case 'demo_block':
+      //$block['subject'] = t('Demo Block');
+      $block['content'] = drupal_get_form('subscribe_form');
+      break;
+  }
+    //dsm($block);
+  return $block;
+}
+
+
+
