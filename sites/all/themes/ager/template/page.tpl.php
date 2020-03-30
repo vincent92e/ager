@@ -19,7 +19,7 @@
  * - $is_admin: TRUE if the user has permission to access administration pages.
  *
  * Site identity:
- * - $front_page: The URL of the front page. Use this instead of $base_path,
+ * - $base_url: The URL of the front page. Use this instead of $base_path,
  *   when linking to the front page. This includes the language domain or
  *   prefix.
  * - $logo: The path to the logo image, as defined in theme configuration.
@@ -80,7 +80,7 @@
 
     <!-- navigation -->
     <nav class="navbar navbar-expand-lg navbar-bkg">
-      <a class="navbar-brand" href="<?php print url("<front>"); ?>"><img src="<?php print $front_page . 'sites/all/themes/ager/img/blue-arrow.png'; ?>" alt="logo-arrow">
+      <a class="navbar-brand" href="<?php print url("<front>"); ?>"><img src="<?php print $base_url . 'sites/all/themes/ager/img/blue-arrow.png'; ?>" alt="logo-arrow">
         <div class="ag ml-2">AG</div><div class="er">ER</div>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -94,7 +94,7 @@
               Home
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="<?php print $front_page . 'listings'; ?>">Listings</a>
+              <a class="dropdown-item" href="<?php print $base_url . 'listings'; ?>">Listings</a>
             </div>
           </li>
           <li class="nav-item dropdown mr-4">
@@ -103,7 +103,7 @@
               Search
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="<?php print $front_page . 'listings'; ?>">Listings</a>
+              <a class="dropdown-item" href="<?php print $base_url . 'listings'; ?>">Listings</a>
             </div>
           </li>
           <li class="nav-item dropdown mr-4">
@@ -133,12 +133,14 @@
 
       <!-- display exposed form only on the frontpage -->
       <?php if (($page['content_exposed_form']) && ($is_front == TRUE)): ?>
-        <div class="container expo-form">
-          <div class="row">
-            <div class="col col-lg-9 ml-auto mr-auto visible">
-              <!-- print region with exposed form -->
-              <?php print render($page['content_exposed_form']); ?>
-              <div class="pop-searches "><span class="pop-searches-cust">Popular searches:</span> backyard, baby, books, cloth, pets, mobile</div>
+        <div class="exposed-search-form">
+          <div class="container">
+            <div class="row">
+              <div class="col col-lg-9 ml-auto mr-auto visible">
+                <!-- print region with exposed form -->
+                <?php print render($page['content_exposed_form']); ?>
+                <div class="pop-searches "><span class="pop-searches-cust">Popular searches:</span> backyard, baby, books, cloth, pets, mobile</div>
+              </div>
             </div>
           </div>
         </div>
@@ -269,12 +271,12 @@
       <div class="sponsors-list">
         <div class="container">
           <div class="row">
-            <div class="col-4 col-md-2 mb-3"><div class="spons-img text-center"><img class="img-fluid mt-auto mb-auto p-3" src="<?php print $front_page . 'sites/all/themes/ager/img/Houston.png'; ?>"></div></div>
-            <div class="col-4 col-md-2"><div class="spons-img text-center"><img class="img-fluid mt-auto mb-auto p-3" src="<?php print $front_page . 'sites/all/themes/ager/img/Henderson.png'; ?>"></div></div>
-            <div class="col-4 col-md-2"><div class="spons-img text-center"><img class="img-fluid mt-auto mb-auto p-3" src="<?php print $front_page . 'sites/all/themes/ager/img/HookMiller.png'; ?>"></div></div>
-            <div class="col-4 col-md-2"><div class="spons-img text-center"><img class="img-fluid mt-auto mb-auto p-3" src="<?php print $front_page . 'sites/all/themes/ager/img/HoneyDev.png'; ?>"></div></div>
-            <div class="col-4 col-md-2"><div class="spons-img text-center"><img class="img-fluid mt-auto mb-auto p-3" src="<?php print $front_page . 'sites/all/themes/ager/img/Woodhills.png'; ?>"></div></div>
-            <div class="col-4 col-md-2"><div class="spons-img text-center"><img class="img-fluid mt-auto mb-auto p-3" src="<?php print $front_page . 'sites/all/themes/ager/img/Mechanix.png'; ?>"></div></div>
+            <div class="col-4 col-md-2 mb-3"><div class="spons-img text-center"><img class="img-fluid mt-auto mb-auto p-3" src="<?php print $base_url . 'sites/all/themes/ager/img/Houston.png'; ?>"></div></div>
+            <div class="col-4 col-md-2"><div class="spons-img text-center"><img class="img-fluid mt-auto mb-auto p-3" src="<?php print $base_url . 'sites/all/themes/ager/img/Henderson.png'; ?>"></div></div>
+            <div class="col-4 col-md-2"><div class="spons-img text-center"><img class="img-fluid mt-auto mb-auto p-3" src="<?php print $base_url . 'sites/all/themes/ager/img/HookMiller.png'; ?>"></div></div>
+            <div class="col-4 col-md-2"><div class="spons-img text-center"><img class="img-fluid mt-auto mb-auto p-3" src="<?php print $base_url . 'sites/all/themes/ager/img/HoneyDev.png'; ?>"></div></div>
+            <div class="col-4 col-md-2"><div class="spons-img text-center"><img class="img-fluid mt-auto mb-auto p-3" src="<?php print $base_url . 'sites/all/themes/ager/img/Woodhills.png'; ?>"></div></div>
+            <div class="col-4 col-md-2"><div class="spons-img text-center"><img class="img-fluid mt-auto mb-auto p-3" src="<?php print $base_url . 'sites/all/themes/ager/img/Mechanix.png'; ?>"></div></div>
           </div>
         </div>
       </div>
