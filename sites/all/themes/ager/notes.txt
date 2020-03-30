@@ -1,0 +1,39 @@
+TO USE A TEMPLATE:
+
+function ager_theme() {
+    return array(
+        'views_exposed_form__listings__page' => array(   // should have the form_id
+            'render element' => 'form',
+            'template' => 'views-exposed-form--listings--page',
+            'path' => drupal_get_path('theme', 'ager') . '/template',
+        ),
+    );
+}
+
+
+
+TO USE A FUNCTION:
+
+function ager_theme() {
+    return array(
+        'views_exposed_form__listings__page' => array(   // should have the form_id
+            'render element' => 'form',
+        ),
+    );
+}
+
+// When using in a theme
+function themename_views_exposed_form__listings__page($var) {
+    ...
+}
+
+When defined in a module to be used by themes
+function theme_views_exposed_form__listings__page($var) {
+    ...
+}
+
+PREPROCESS FUNCTION FOR TEMPLATE FILE
+
+function yourtheme_preprocess_commerce_checkout_form_checkout(&$variables) {
+  /* Add or modify your variables */
+}
