@@ -80,7 +80,7 @@
 
     <!-- navigation -->
     <nav class="navbar navbar-expand-lg navbar-bkg">
-      <a class="navbar-brand" href="<?php print url("<front>"); ?>"><img src="<?php print $base_url . 'sites/all/themes/ager/img/blue-arrow.png'; ?>" alt="logo-arrow">
+      <a class="navbar-brand" href="<?php print url("<front>"); ?>"><img src="<?php print $base_url . '/sites/all/themes/ager/img/blue-arrow.png'; ?>" alt="logo-arrow">
         <div class="ag ml-2">AG</div><div class="er">ER</div>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -94,7 +94,7 @@
               Home
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="<?php print $base_url . 'listings'; ?>">Listings</a>
+              <a class="dropdown-item" href="<?php print $base_url . '/listings'; ?>">Listings</a>
             </div>
           </li>
           <li class="nav-item dropdown mr-4">
@@ -103,7 +103,7 @@
               Search
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="<?php print $base_url . 'listings'; ?>">Listings</a>
+              <a class="dropdown-item" href="<?php print $base_url . '/listings'; ?>">Listings</a>
             </div>
           </li>
           <li class="nav-item dropdown mr-4">
@@ -271,12 +271,12 @@
       <div class="sponsors-list">
         <div class="container">
           <div class="row">
-            <div class="col-4 col-md-2 mb-3"><div class="spons-img text-center"><img class="img-fluid mt-auto mb-auto p-3" src="<?php print $base_url . 'sites/all/themes/ager/img/Houston.png'; ?>"></div></div>
-            <div class="col-4 col-md-2"><div class="spons-img text-center"><img class="img-fluid mt-auto mb-auto p-3" src="<?php print $base_url . 'sites/all/themes/ager/img/Henderson.png'; ?>"></div></div>
-            <div class="col-4 col-md-2"><div class="spons-img text-center"><img class="img-fluid mt-auto mb-auto p-3" src="<?php print $base_url . 'sites/all/themes/ager/img/HookMiller.png'; ?>"></div></div>
-            <div class="col-4 col-md-2"><div class="spons-img text-center"><img class="img-fluid mt-auto mb-auto p-3" src="<?php print $base_url . 'sites/all/themes/ager/img/HoneyDev.png'; ?>"></div></div>
-            <div class="col-4 col-md-2"><div class="spons-img text-center"><img class="img-fluid mt-auto mb-auto p-3" src="<?php print $base_url . 'sites/all/themes/ager/img/Woodhills.png'; ?>"></div></div>
-            <div class="col-4 col-md-2"><div class="spons-img text-center"><img class="img-fluid mt-auto mb-auto p-3" src="<?php print $base_url . 'sites/all/themes/ager/img/Mechanix.png'; ?>"></div></div>
+            <div class="col-4 col-md-2 mb-3"><div class="spons-img text-center"><img class="img-fluid mt-auto mb-auto p-3" src="<?php print $base_url . '/sites/all/themes/ager/img/Houston.png'; ?>"></div></div>
+            <div class="col-4 col-md-2"><div class="spons-img text-center"><img class="img-fluid mt-auto mb-auto p-3" src="<?php print $base_url . '/sites/all/themes/ager/img/Henderson.png'; ?>"></div></div>
+            <div class="col-4 col-md-2"><div class="spons-img text-center"><img class="img-fluid mt-auto mb-auto p-3" src="<?php print $base_url . '/sites/all/themes/ager/img/HookMiller.png'; ?>"></div></div>
+            <div class="col-4 col-md-2"><div class="spons-img text-center"><img class="img-fluid mt-auto mb-auto p-3" src="<?php print $base_url . '/sites/all/themes/ager/img/HoneyDev.png'; ?>"></div></div>
+            <div class="col-4 col-md-2"><div class="spons-img text-center"><img class="img-fluid mt-auto mb-auto p-3" src="<?php print $base_url . '/sites/all/themes/ager/img/Woodhills.png'; ?>"></div></div>
+            <div class="col-4 col-md-2"><div class="spons-img text-center"><img class="img-fluid mt-auto mb-auto p-3" src="<?php print $base_url . '/sites/all/themes/ager/img/Mechanix.png'; ?>"></div></div>
           </div>
         </div>
       </div>

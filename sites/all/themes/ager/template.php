@@ -39,6 +39,9 @@ function ager_preprocess_page(&$variables) {
 
     // assign the clip class if page is not frontpage
     $variables['clip'] = ($variables['is_front'])? '':'clip';
+
+    global $base_url;
+    $variables['base_url'] = $base_url;
 }
 
 /**
@@ -83,6 +86,9 @@ function ager_preprocess_node(&$variables) {
     if (($variables['is_front'] == FALSE) && ($variables['type'] == 'listing')) {
         $variables['custom_breadcrumb'] = '<div class="brdcrmb ml-2"><a href="'.url("<front>").'">Home</a>'.'<span class="arrow ml-1 mr-1">'.' > </span>'.' Listing</div>';
     }
+
+    global $base_url;
+    $variables['base_url'] = $base_url;
 }
 
 /*
@@ -201,6 +207,9 @@ function ager_preprocess_views_view(&$variables) {
           $variables['ads_by_cities'][$key]['image']['#item']['attributes']['class'][] = 'img-fluid'; // WORKS!
       }
     }
+
+    global $base_url;
+    $variables['base_url'] = $base_url;
 }
 
 /**
